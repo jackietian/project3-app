@@ -1,0 +1,42 @@
+form {
+    margin: 10rem auto 0;
+    width: 50%;
+
+    display: flex;
+    flex-direction: column;
+
+    border: 1px solid #000;
+    border-radius: 5px;
+
+    padding: 1rem 2rem;
+
+    h1 {
+        text-align: center;
+    }
+
+    section {
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: row;
+
+        label {
+            width: 30%;
+            text-align: right;
+
+            &:after {
+                content: ':';
+                margin-right: 0.5rem;
+            }
+        }
+
+        input {
+            width: 70%;
+        }
+
+        &.actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    }
+}

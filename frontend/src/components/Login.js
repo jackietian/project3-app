@@ -8,8 +8,8 @@ const Login = () => {
     const dispatch = useDispatch()
     const history = useHistory()
 
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
+    const [email, setEmail] = useState('jackie.tian@gmail.com')
+    const [password, setPassword] = useState('123')
 
     const handleChangeEmail = (e) => {
         const value = e.target.value
@@ -64,10 +64,12 @@ const Login = () => {
                     />
                 </section>
 
-                <button type="reset" onClick={handleReset}>
-                    cancel
-                </button>
-                <button type="submit">Submit</button>
+                <section className="actions">
+                    <button type="reset" onClick={handleReset}>
+                        cancel
+                    </button>
+                    <button type="submit">Submit</button>
+                </section>
             </form>
         </main>
     )
