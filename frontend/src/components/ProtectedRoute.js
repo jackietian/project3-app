@@ -1,7 +1,7 @@
-import { Route, Redirect, useHistory } from 'react-router-dom'
+import { Route, Redirect, useHistory, NavLink } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { isAuthenticated } from '../services/utils'
-import { logout } from '../actions/auth.action'
+import { logout } from '../state/auth/auth.action'
 
 const ProtectedRoute = (props) => {
     const history = useHistory()
@@ -17,7 +17,12 @@ const ProtectedRoute = (props) => {
             <>
                 <header>
                     <h1>Demo P3</h1>
-                    <button onClick={handleLogout}>Logout</button>
+                    <ul>
+                        <li>
+                            <NavLink to="/home">Home</NavLink>
+                        </li>
+                        <li onClick={handleLogout}>Logout</li>
+                    </ul>
                 </header>
                 <main>
                     <Route {...props} />

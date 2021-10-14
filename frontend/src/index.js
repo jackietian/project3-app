@@ -3,8 +3,10 @@ import { Provider } from 'react-redux'
 import thunk from 'redux-thunk'
 import { createStore, applyMiddleware } from 'redux'
 import { composeWithDevTools } from 'redux-devtools-extension'
-import rootReducer from './reducers'
+import rootReducer from './state/reducers'
 import App from './App'
+
+import './styles/index.scss'
 
 const middleware = [thunk]
 const store = createStore(

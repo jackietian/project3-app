@@ -1,4 +1,4 @@
-import { loginApi } from '../api/auth'
+import { loginApi } from '../../api/auth'
 const login = (data) => {
     return (dispatch) => {
         return loginApi(data)

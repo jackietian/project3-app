@@ -1,0 +1,13 @@
+@import './reset.scss';
+@import './normalize.scss';
+@import './header.scss';
+@import './form.scss';
+@import './button.scss';
+
+body {
+    font-size: 1rem;
+
+    main {
+        padding: 1rem;
+    }
+}

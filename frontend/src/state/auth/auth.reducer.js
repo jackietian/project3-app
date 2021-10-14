@@ -2,7 +2,7 @@ import {
     setToken,
     setEmail,
     clearSessionStorage,
-} from '../services/sessionStorage'
+} from '../../services/sessionStorage'
 const initialState = {
     loading: false,
     currentUser: {},
