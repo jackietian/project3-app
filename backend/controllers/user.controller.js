@@ -7,7 +7,7 @@ const secret = "test";
 
 const getUsers = async (req, res) => {
   try {
-    const users = await User.find();
+    const users = await UserModal.find();
 
     res.status(200).json(users);
   } catch (error) {
