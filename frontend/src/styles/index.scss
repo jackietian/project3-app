@@ -3,11 +3,26 @@
 @import './header.scss';
 @import './form.scss';
 @import './button.scss';
+@import './list.scss';
 
 body {
     font-size: 1rem;
 
     main {
         padding: 1rem;
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .space-between {
+        justify-content: space-between;
     }
 }

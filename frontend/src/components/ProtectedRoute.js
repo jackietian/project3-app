@@ -21,6 +21,9 @@ const ProtectedRoute = (props) => {
                         <li>
                             <NavLink to="/home">Home</NavLink>
                         </li>
+                        <li>
+                            <NavLink to="/calendar">Calendar</NavLink>
+                        </li>
                         <li onClick={handleLogout}>Logout</li>
                     </ul>
                 </header>
