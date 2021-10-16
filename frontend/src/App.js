@@ -7,7 +7,7 @@ import {
 import Login from './components/Login'
 import Home from './components/Home'
 import ProtectedRoute from './components/ProtectedRoute'
-import MonthlyCalendar from './components/MonthlyCalendar'
+import Calendar from './components/Calendar'
 
 const App = () => {
     return (
@@ -15,11 +15,7 @@ const App = () => {
             <Switch>
                 <Route path="/" exact component={Login} />
                 <ProtectedRoute path="/home" exact component={Home} />
-                <ProtectedRoute
-                    path="/calendar"
-                    exact
-                    component={MonthlyCalendar}
-                />
+                <ProtectedRoute path="/calendar" exact component={Calendar} />
                 <Route>
                     <Redirect to="/" />
                 </Route>

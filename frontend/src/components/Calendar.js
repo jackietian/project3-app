@@ -1,12 +1,14 @@
 import { useState } from 'react'
 import MonthlyCalendar from './MonthlyCalendar'
+import WeeklyCalendar from './WeekCalendar'
+import DailyCalendar from './DailyCalendar'
 
 const Calendar = () => {
     const [activeTab, setActiveTab] = useState(0)
     return (
         <>
-            <section>
-                <ul className="list">
+            <section className="center">
+                <ul className="list list--actions">
                     <li onClick={() => setActiveTab(0)}>Month</li>
                     <li onClick={() => setActiveTab(1)}>Week</li>
                     <li onClick={() => setActiveTab(2)}>Day</li>
@@ -14,8 +16,8 @@ const Calendar = () => {
             </section>
             <section>
                 {activeTab === 0 && <MonthlyCalendar />}
-                {activeTab === 1 && <h1>day cal</h1>}
-                {activeTab === 2 && <h1>week cal</h1>}
+                {activeTab === 1 && <WeeklyCalendar />}
+                {activeTab === 2 && <DailyCalendar />}
             </section>
         </>
     )

@@ -8,7 +8,7 @@ const Login = () => {
     const dispatch = useDispatch()
     const history = useHistory()
 
-    const [email, setEmail] = useState('jackie.tian@gmail.com')
+    const [email, setEmail] = useState('bar@gmail.com')
     const [password, setPassword] = useState('123')
 
     const handleChangeEmail = (e) => {
