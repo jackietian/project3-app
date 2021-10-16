@@ -7,7 +7,6 @@ const { UserModel } = require('../models')
 
 router.post('/', async (req, res) => {
     const { email, password } = req.body
-    console.log(email, password)
 
     try {
         const oldUser = await UserModel.findOne({ email })
