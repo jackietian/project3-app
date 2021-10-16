@@ -30,7 +30,6 @@ class MonthlyCalendar extends React.Component {
     goNext = () => {
         const { month, year } = this.state
         const nextMonthDate = new Date(year, month + 1)
-        console.log(month, year, nextMonthDate)
         this.setState({
             month: getMonth(nextMonthDate),
             year: getYear(nextMonthDate),
@@ -83,6 +82,10 @@ class MonthlyCalendar extends React.Component {
                             {item?.label === 1
                                 ? `1 ${months[getMonth(new Date(item.value))]}`
                                 : item.label}
+                            <ul>
+                                <li>todo1</li>
+                                <li>todo2</li>
+                            </ul>
                         </li>
                     ))}
                 </ul>

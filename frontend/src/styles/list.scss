@@ -50,6 +50,30 @@ ul {
             &:nth-child(even) {
                 background-color: #fff;
             }
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                width: 95%;
+                padding: 0 5px;
+
+                li {
+                    margin: 2px 0;
+                    height: 10px;
+                    font-size: 0.5rem;
+                    width: 100%;
+                    text-align: left;
+                    color: #000;
+
+                    &:nth-child(odd) {
+                        background-color: green;
+                    }
+
+                    &:nth-child(even) {
+                        background-color: yellowgreen;
+                    }
+                }
+            }
         }
     }
 
