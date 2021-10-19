@@ -21,15 +21,7 @@ router.post('/', async (req, res) => {
             password: hashedPassword,
         })
 
-        const token = jwt.sign(
-            { email: result.email, id: result._id },
-            process.env.JWT_SECRET,
-            {
-                expiresIn: '1h',
-            }
-        )
-
-        res.status(201).json({ result, token })
+        res.status(201).json({ result })
     } catch (error) {
         res.status(409).json({ message: error.message })
     }
