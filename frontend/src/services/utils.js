@@ -45,4 +45,20 @@ const isAuthenticated = () => {
     return token
 }
 
-export { validateEmail, validatePassword, isJWTExpired, isAuthenticated }
+const isAuthorized = (path) => {
+    const type = sessionStorage.getItem('type')
+
+    if (type === 'staff' && path === '/chat') {
+        return false
+    }
+
+    return true
+}
+
+export {
+    validateEmail,
+    validatePassword,
+    isJWTExpired,
+    isAuthenticated,
+    isAuthorized,
+}

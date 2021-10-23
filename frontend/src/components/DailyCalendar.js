@@ -8,6 +8,8 @@ import {
     getDay,
 } from '../services/dates'
 
+import { withAuthorization } from './withAuthorization'
+
 const DailyCalendar = () => {
     const [month, setMonth] = useState(getMonth(getCurrentDate()))
     const [year, setYear] = useState(getYear(getCurrentDate()))
@@ -87,4 +89,4 @@ const DailyCalendar = () => {
     )
 }
 
-export default DailyCalendar
+export default withAuthorization(DailyCalendar)

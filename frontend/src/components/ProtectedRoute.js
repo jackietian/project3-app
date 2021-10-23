@@ -1,6 +1,6 @@
 import { Route, Redirect, useHistory, NavLink } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
-import { isAuthenticated } from '../services/utils'
+import { isAuthenticated, isAuthorized } from '../services/utils'
 import { logout } from '../state/auth/auth.action'
 
 const ProtectedRoute = (props) => {
@@ -10,6 +10,10 @@ const ProtectedRoute = (props) => {
     const handleLogout = () => {
         dispatch(logout())
         history.replace('/')
+    }
+
+    if (!isAuthorized(props.path)) {
+        return <h1>not Authorized</h1>
     }
 
     if (isAuthenticated()) {
@@ -23,6 +27,9 @@ const ProtectedRoute = (props) => {
                         </li>
                         <li>
                             <NavLink to="/calendar">Calendar</NavLink>
+                        </li>
+                        <li>
+                            <NavLink to="/chat">Chat</NavLink>
                         </li>
                         <li onClick={handleLogout}>Logout</li>
                     </ul>
