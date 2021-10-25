@@ -7,8 +7,8 @@
 - [x] calendar
 - [x] admin/staff user access control
 - [x] AWS lamda
-- [] Jest tests
-- [ ] Advanced search, e.g keyword(name, title, description), tag, price
+- [x] Jest tests
+- [x] Advanced search, e.g keyword(name, title, description), tag, price
 - [ ] Export csv
 - [ ] Send email
 - [ ] Web socket

@@ -1,8 +1,8 @@
-#AWS API Gateway & Lamda
+#AWS API Gateway & Lambda
 
 ## AWS Lamda
 
-- create lamda function
+- create lambda function
 - create test function
 - save lamda as demoAPI
 
@@ -18,3 +18,26 @@
 - deploy API, to stage, e,g prod
 
 ## AWS API Gateway authorizer
+
+- create authorizer, lambda
+  - check AuthorizationToken in header
+  - return allow or deny IAM policy
+- add authorizor to api gateway resource, and redeploy
+
+```
+{
+   "principalId":"abc123",
+   "policyDocument":{
+      "Version":"2012-10-17",
+      "Statement":[
+         {
+            "Action":"execute-api:Invoke",
+            "Resource":[
+               "arn:aws:execute-api:us-east-1:YOURACCOUNTNUMBER:YOURLAMBDAID/*/*"
+            ],
+            "Effect":"auth"
+         }
+      ]
+   }
+}
+```
