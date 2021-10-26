@@ -1,19 +1,7 @@
 require('dotenv').config()
-
-const express = require('express')
 const mongoose = require('mongoose')
-const cors = require('cors')
-const helmet = require('helmet')
-const router = require('./router/index')
 
-const app = express()
-
-app.use(express.json({ extended: true }))
-app.use(express.urlencoded({ extended: true }))
-app.use(cors())
-app.use(helmet())
-
-app.use('/api', router)
+const app = require('./app')
 
 mongoose
     .connect(process.env.DATABASE)
