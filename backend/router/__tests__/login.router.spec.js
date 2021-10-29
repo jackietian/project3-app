@@ -22,6 +22,10 @@ describe('POST /login', () => {
         }
     })
 
+    afterAll((done) => {
+        done()
+    })
+
     it('when user provides correct email and password', async () => {
         await request(app)
             .post('/api/login')

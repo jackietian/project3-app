@@ -24,6 +24,10 @@ describe('POST /register', () => {
         UserModel.create = async (data) => data
     })
 
+    afterAll((done) => {
+        done()
+    })
+
     it('when user provides new email and password', async () => {
         await request(app)
             .post('/api/register')

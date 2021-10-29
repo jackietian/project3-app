@@ -21,4 +21,4 @@ const logout = () => ({
     type: 'LOGOUT',
 })
 
-export { login, logout }
+export { login, logout, loginSuccess }
