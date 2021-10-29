@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useHistory, useLocation } from 'react-router-dom'
-import { getMovies } from '../api/movies'
+import { getMovies, downloadMovies } from '../api/movies'
 
 const Search = () => {
     const types = ['all', 'typeA', 'typeB', 'typeC']
@@ -55,6 +55,18 @@ const Search = () => {
         setActiveRegion(region || 'all')
     }, [])
 
+    const download = async () => {
+        await downloadMovies().then((response) => {
+            console.log(response)
+            const url = window.URL.createObjectURL(new Blob([response.data]))
+            const link = document.createElement('a')
+            link.href = url
+            link.setAttribute('download', `csv-${Date.now()}.csv`)
+            document.body.appendChild(link)
+            link.click()
+        })
+    }
+
     return (
         <div className="search">
             <h1>search</h1>
@@ -65,6 +77,7 @@ const Search = () => {
                 placeholder="search by name, title or description"
             />
             <button onClick={handleSearch}>search</button>
+            <button onClick={download}>Download</button>
             <section className="row">
                 <p>type</p>
                 <ul className="row">

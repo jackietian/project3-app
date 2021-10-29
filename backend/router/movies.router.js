@@ -1,4 +1,5 @@
 const express = require('express')
+const { Parser } = require('json2csv')
 const router = express.Router()
 const movies = require('./movies.json')
 
@@ -23,6 +24,17 @@ router.get('/', async (req, res) => {
             return found
         })
         res.status(201).json(filteredMovies)
+    } catch (error) {
+        res.status(409).json({ message: error.message })
+    }
+})
+
+router.get('/download', async (req, res) => {
+    try {
+        const json2csvParser = new Parser()
+        const csv = json2csvParser.parse(movies)
+
+        res.attachment('movies.csv').send(csv)
     } catch (error) {
         res.status(409).json({ message: error.message })
     }
