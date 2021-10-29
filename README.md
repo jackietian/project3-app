@@ -9,6 +9,6 @@
 - [x] AWS lamda
 - [x] Jest tests
 - [x] Advanced search, e.g keyword(name, title, description), tag, price
-- [ ] Export csv
-- [ ] Send email
+- [x] Export csv
+- [x] Send email
 - [ ] Web socket
