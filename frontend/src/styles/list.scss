@@ -134,4 +134,13 @@ ul {
             height: 2rem;
         }
     }
+
+    &.list--search-types {
+        li {
+            width: 5rem;
+            flex-grow: 1;
+            cursor: pointer;
+            background-color: #efefef;
+        }
+    }
 }

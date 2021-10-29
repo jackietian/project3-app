@@ -1,0 +1,31 @@
+.search {
+    text-transform: capitalize;
+
+    input {
+        min-width: 15rem;
+    }
+
+    button {
+        text-transform: capitalize;
+    }
+
+    section {
+        display: flex;
+        flex-direction: row;
+        margin: 1rem 0;
+        p {
+            margin-right: 2rem;
+        }
+
+        ul {
+            flex-grow: 1;
+            li {
+                width: 5rem;
+
+                &.active {
+                    color: red;
+                }
+            }
+        }
+    }
+}

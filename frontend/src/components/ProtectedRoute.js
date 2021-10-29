@@ -29,6 +29,9 @@ const ProtectedRoute = (props) => {
                             <NavLink to="/calendar">Calendar</NavLink>
                         </li>
                         <li>
+                            <NavLink to="/search">Search</NavLink>
+                        </li>
+                        <li>
                             <NavLink to="/chat">Chat</NavLink>
                         </li>
                         <li onClick={handleLogout}>Logout</li>

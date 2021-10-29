@@ -1,0 +1,56 @@
+[
+    {
+        "imdbID": "tt0096895",
+        "title": "Batman",
+        "type": "typeA",
+        "region": "US"
+    },
+    {
+        "imdbID": "tt0468569",
+        "title": "The Dark Knight",
+        "type": "typeA",
+        "region": "Australia"
+    },
+    {
+        "imdbID": "tt2975590",
+        "title": "Batman v Superman: Dawn of Justice",
+        "type": "typeA",
+        "region": "China"
+    },
+    {
+        "imdbID": "tt1345836",
+        "title": "The Dark Knight Rises",
+        "type": "typeA",
+        "region": "China"
+    },
+    {
+        "imdbID": "tt0372784",
+        "title": "Batman Begins",
+        "type": "typeA",
+        "region": "China"
+    },
+    {
+        "imdbID": "tt4116284",
+        "title": "The LEGO Batman Movie",
+        "type": "typeA",
+        "region": "China"
+    },
+    {
+        "imdbID": "tt0112462",
+        "title": "Batman Forever",
+        "type": "typeA",
+        "region": "China"
+    },
+    {
+        "imdbID": "tt0118688",
+        "title": "Batman & Robin",
+        "type": "typeB",
+        "region": "China"
+    },
+    {
+        "imdbID": "tt0103776",
+        "title": "Batman Returns",
+        "type": "typeA",
+        "region": "China"
+    }
+]
