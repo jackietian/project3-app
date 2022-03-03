@@ -9,7 +9,9 @@ router.get('/', async (req, res) => {
         const filteredMovies = movies.filter((movie) => {
             let found = true
             if (search !== '') {
-                found = found && movie.title.toLowerCase().includes(search)
+                found =
+                    found &&
+                    movie.title.toLowerCase().includes(search.toLowerCase())
             }
 
             if (region !== 'all') {

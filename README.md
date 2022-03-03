@@ -12,3 +12,4 @@
 - [x] Export csv
 - [x] Send email
 - [ ] Web socket
+- [ ] Global notification

@@ -9,6 +9,7 @@ import Home from './components/Home'
 import ProtectedRoute from './components/ProtectedRoute'
 import Calendar from './components/Calendar'
 import Search from './components/Search'
+import Toasts from './components/Toasts'
 
 const App = () => {
     return (
@@ -22,6 +23,9 @@ const App = () => {
                     <Redirect to="/" />
                 </Route>
             </Switch>
+            <section>
+                <Toasts />
+            </section>
         </Router>
     )
 }

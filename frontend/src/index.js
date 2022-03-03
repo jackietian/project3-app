@@ -9,7 +9,7 @@ import App from './App'
 import './styles/index.scss'
 
 const middleware = [thunk]
-const store = createStore(
+export const store = createStore(
     rootReducer,
     composeWithDevTools(applyMiddleware(...middleware))
 )
